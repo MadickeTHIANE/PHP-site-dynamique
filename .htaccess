@@ -1,0 +1,13 @@
+# fichier de redirection
+
+# syntaxe :
+# Rewrite on
+# RewriteRule [expression à récupérer] [adresse de redirection]
+# https://docs.ovh.com/fr/hosting/htaccess-reecriture-url-mod-rewrite/
+
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9\-/_]*)$ index.php?p=$1
+
+# fichier .htaccess placé à la racine (tp-1) => récupère tout ce qui passe après tp-1 dans $1 soit => $_GET['p'] et redirige vers index.php
+# http://localhost/PHP&SQL/projet-php/tp-1/Accueil/index
+
